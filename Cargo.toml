@@ -18,9 +18,8 @@ include = [
 ]
 
 [dependencies]
-egui = "0.26.0"
-# use a fork of egui-miniquad that's been updated to support egui 0.26.0 until https://github.com/not-fl3/egui-miniquad/pull/65 is merged
-egui-miniquad = { git = 'https://github.com/crumblingstatue/egui-miniquad.git' }
+egui = "0.28"
+egui-miniquad = "0.15"
 macroquad = { version="0.4.5", default-features=false }
 
 [features]
@@ -28,7 +27,7 @@ default = ["audio"]
 audio = ["macroquad/audio"]
 
 [dev-dependencies]
-egui_demo_lib = "0.26.0"
+egui_demo_lib = "0.28"
 
 [profile.release]
 opt-level = 2
