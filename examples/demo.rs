@@ -1,4 +1,4 @@
-use macroquad::prelude::*;
+use {egui_macroquad::EguiMqInteg, macroquad::prelude::*};
 
 fn window_conf() -> Conf {
     Conf {
@@ -21,11 +21,12 @@ async fn main() {
     let mut draw_primitives_after_egui = false;
 
     let mut pixels_per_point: Option<f32> = None;
+    let mut integ = EguiMqInteg::new();
 
     loop {
         clear_background(WHITE);
 
-        egui_macroquad::ui(|egui_ctx| {
+        integ.ui(|_, egui_ctx| {
             if pixels_per_point.is_none() {
                 pixels_per_point = Some(egui_ctx.pixels_per_point());
             }
@@ -61,7 +62,7 @@ async fn main() {
         if !draw_primitives_after_egui {
             draw_primitives();
         }
-        egui_macroquad::draw();
+        integ.draw();
         if draw_primitives_after_egui {
             draw_primitives();
         }
