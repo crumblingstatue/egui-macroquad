@@ -18,8 +18,8 @@ include = [
 ]
 
 [dependencies]
-egui = "0.28"
-egui-miniquad = "0.15"
+egui = "0.29"
+egui-miniquad = { git = "https://github.com/crumblingstatue/egui-miniquad.git" }
 macroquad = { version="0.4.5", default-features=false }
 
 [features]
@@ -27,7 +27,7 @@ default = ["audio"]
 audio = ["macroquad/audio"]
 
 [dev-dependencies]
-egui_demo_lib = "0.28"
+egui_demo_lib = "0.29"
 
 [profile.release]
 opt-level = 2

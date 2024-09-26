@@ -78,7 +78,7 @@ impl EguiMqInteg {
     /// Do the egui ui update
     pub fn ui<F>(&mut self, f: F)
     where
-        F: FnOnce(&mut dyn mq::RenderingBackend, &egui::Context),
+        F: FnMut(&mut dyn mq::RenderingBackend, &egui::Context),
     {
         let gl = unsafe { get_internal_gl() };
         macroquad::input::utils::repeat_all_miniquad_input(self, self.input_subscriber_id);
