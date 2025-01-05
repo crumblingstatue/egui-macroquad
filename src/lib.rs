@@ -52,7 +52,7 @@ use egui_miniquad::EguiMq;
 use macroquad::prelude::*;
 use miniquad as mq;
 
-pub use egui;
+pub use egui_miniquad::egui;
 pub use macroquad;
 
 /// Macroquad integration for egui
