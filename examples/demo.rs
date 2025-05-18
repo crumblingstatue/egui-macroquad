@@ -1,4 +1,4 @@
-use {egui_macroquad::egui, egui_macroquad::EguiMqInteg, macroquad::prelude::*};
+use {egui_macroquad::EguiMqInteg, egui_macroquad::egui, macroquad::prelude::*};
 
 fn window_conf() -> Conf {
     Conf {
