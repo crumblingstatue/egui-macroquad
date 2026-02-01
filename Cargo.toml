@@ -26,7 +26,7 @@ default = ["audio"]
 audio = ["macroquad/audio"]
 
 [dev-dependencies]
-egui_demo_lib = "0.32"
+egui_demo_lib = "0.33"
 
 [profile.release]
 opt-level = 2
